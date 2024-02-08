@@ -19,4 +19,11 @@ export class CategoryService {
 
     return this.http.get<any[]>(endpoint);
   }
+
+  // Guardar categoria
+  saveCategorie(body: any): Observable<any> {
+    const endpoint = `${base_url}/categories`;
+
+    return this.http.post<any>(endpoint, body);
+  }
 }
